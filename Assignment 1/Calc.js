@@ -28,7 +28,7 @@ function compute()
     val.includes("sin") ? val = val.replace("sin", "Math.sin") : val;
     val.includes("cos") ? val = val.replace("cos", "Math.cos") : val;
     val.includes("tan") ? val = val.replace("tan", "Math.tan") : val;
-    val.includes("log") ? val = val.replace("log", "Math.log") : val;
+    val.includes("log") ? val = val.replace("log", "Math.log10") : val;
     val.includes("sqrt") ? val = val.replace("sqrt", "Math.sqrt") : val;
     val.includes("PI") ? val = val.replace("PI", "Math.PI") : val;
     val.includes("e") ? val = val.replace("e", "Math.E") : val;
@@ -51,5 +51,3 @@ function execute(event)
     if(event.key === "Enter")
         compute();
 }
-
-
