@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1> Just a happy little Sci-Fi Calculator!</h1>
     <div class="Calculator">
-        <input id ="screen" type="text" readonly><br>
+        <div class="output">
+            <input class ="screen" type="text" readonly><br>
+        </div>
         <div class="btn">
             <button id="sin"  onclick= "display('sin(')">sin</button>
             <button id="cos"  onclick= "display('cos(')">cos</button>
@@ -42,6 +43,7 @@
             <button id="e"    onclick= "display('e')">e</button>
             <button id="="    onclick= "compute()">=</button><br>
         </div>
+        <h4>Created by Devansh Bansal</h4>
     </div>
 </body>
 </html>
