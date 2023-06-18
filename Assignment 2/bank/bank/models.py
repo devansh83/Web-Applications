@@ -21,7 +21,7 @@ class Transaction(models.Model):
         amount = models.FloatField(default=0)
         
         def __str__(self):
-            return self.from_user.id + ' to ' + self.to_user.id + ' for ' + str(self.amount)
+            return str(self.from_user.id) + ' to ' + str(self.to_user.id) + ' for ' + str(self.amount)
     
    
 
