@@ -8,10 +8,20 @@ class UserProfile(models.Model):
     email = models.CharField(max_length=50)
     balance = models.FloatField(default=0)
     
-    password = make_password(str(password))
+    def save(self, *args, **kwargs):
+        self.password = make_password(self.password)
+        super(UserProfile, self).save(*args, **kwargs)
     
     def __str__(self):
         return self.username
+ 
+class Transaction(models.Model):
+        from_user = models.ForeignKey(UserProfile, related_name='from_user', on_delete=models.DO_NOTHING)
+        to_user = models.ForeignKey(UserProfile, related_name='to_user', on_delete=models.DO_NOTHING)
+        amount = models.FloatField(default=0)
+        
+        def __str__(self):
+            return self.from_user.id + ' to ' + self.to_user.id + ' for ' + str(self.amount)
     
    
 

@@ -20,5 +20,8 @@ from bank import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/users/', views.UserProfileList)
+    path('api/users/', views.UserProfileList),
+    path('api/users/<int:pk>/', views.UserProfileIndividual),
+    path('api/transactions/', views.TransactionList),
+    path('api/transactions/<int:pk>/', views.TransactionIndividual),
 ]
