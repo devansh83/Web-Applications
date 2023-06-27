@@ -34,3 +34,12 @@ These are the available endpoints:
 | http://localhost:8000/api/users/id    | GET, PUT, DELETE request to update a particular user by ID        |
 | http://localhost:8000/api/transactions/ | GET, POST request to create and view transactions  |
 | http://localhost:8000/api/transactions/id/ | GET request to view transactions by ID |
+
+
+
+
+
+# Assignment 3
+## Portfolio
+
+A basic portfolio website
